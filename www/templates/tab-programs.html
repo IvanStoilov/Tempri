@@ -1,0 +1,16 @@
+<ion-view view-title="Programs">
+  <ion-content class="padding">
+    <div ng-hide="data">
+      <i class="icon ion-loading-c"></i> Loading...
+    </div>
+    <div ng-show="data" class="list card">
+      <a class="item" href="javascript://" ng-repeat="program in data.programs ">
+        <h2 class="padding-vertical">{{getTime(program.from)}} - {{getTime(program.to)}}</h2>
+        <p>
+          <span ng-repeat="day in program.days track by $index" class="program-day-box" ng-class="{active: day}">{{daysOfWeekLetters[$index]}}</span>
+        </p>
+      </a>
+    </div>
+    <button ng-show="data" class="button button-block" ng-click="addProgram()">Add program</button>
+  </ion-content>
+</ion-view>

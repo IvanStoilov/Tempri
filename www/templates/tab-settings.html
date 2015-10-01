@@ -1,0 +1,50 @@
+<ion-view view-title="Settings">
+  <ion-content class="padding">
+    <div ng-hide="data">
+      <i class="icon ion-loading-c"></i> Loading...
+    </div>
+    <ul class="list" ng-show="data">
+      <li class="item item-toggle">
+         System switch
+         <label class="toggle toggle-primary">
+           <input type="checkbox" ng-model="data.on" />
+           <div class="track">
+             <div class="handle"></div>
+           </div>
+         </label>
+      </li>
+      <li class="item card-temperature">
+        <div class="row">
+          <div class="col col-60">
+            Default temperature
+          </div>
+          <div class="col col-10">
+            <a class="font-more-huge" href="javascript://" ng-click="data.defaultTemp=data.defaultTemp-1"><i class="icon ion-minus-circled"></i></a>
+          </div>
+          <div class="col col-20 font-huge text-center">
+            <span ng-show="data.defaultTemp">{{data.defaultTemp}}°</span>
+          </div>
+          <div class="col col-10 text-right">
+            <a  class="font-more-huge" href="javascript://" ng-click="data.defaultTemp=data.defaultTemp+1"><i class="icon ion-plus-circled"></i></a>
+          </div>
+        </div>
+      </li>
+      <li class="item card-temperature">
+        <div class="row">
+          <div class="col col-60">
+            Program temperature
+          </div>
+          <div class="col col-10">
+            <a class="font-more-huge" href="javascript://" ng-click="data.programTemp=data.programTemp-1"><i class="icon ion-minus-circled"></i></a>
+          </div>
+          <div class="col col-20 font-huge text-center">
+            <span ng-show="data.programTemp">{{data.programTemp}}°</span>
+          </div>
+          <div class="col col-10 text-right">
+            <a  class="font-more-huge" href="javascript://" ng-click="data.programTemp=data.programTemp+1"><i class="icon ion-plus-circled"></i></a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </ion-content>
+</ion-view>

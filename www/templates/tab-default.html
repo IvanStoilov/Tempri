@@ -1,0 +1,14 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+    <div ng-hide="data">
+      <i class="icon ion-loading-c"></i> Loading...
+    </div>
+    <div ng-show="data" class="card card-temperature">
+      <div class="row">
+        <div class="col font-huge text-center">
+          <span ng-show="data.currentTemp">{{data.currentTemp}}°</span>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
