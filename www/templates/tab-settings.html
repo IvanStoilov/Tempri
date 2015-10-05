@@ -45,6 +45,38 @@
           </div>
         </div>
       </li>
+      <li class="item card-temperature">
+        <div class="row">
+          <div class="col col-60">
+            Lower bound
+          </div>
+          <div class="col col-10">
+            <a class="font-more-huge" href="javascript://" ng-click="data.lowerBound=data.lowerBound-1"><i class="icon ion-minus-circled"></i></a>
+          </div>
+          <div class="col col-20 font-huge text-center">
+            <span ng-show="data.lowerBound">{{data.lowerBound}}°</span>
+          </div>
+          <div class="col col-10 text-right">
+            <a  class="font-more-huge" href="javascript://" ng-click="data.lowerBound=data.lowerBound+1"><i class="icon ion-plus-circled"></i></a>
+          </div>
+        </div>
+      </li>
+      <li class="item card-temperature">
+        <div class="row">
+          <div class="col col-60">
+            Upper bound
+          </div>
+          <div class="col col-10">
+            <a class="font-more-huge" href="javascript://" ng-click="data.upperBound=data.upperBound-1"><i class="icon ion-minus-circled"></i></a>
+          </div>
+          <div class="col col-20 font-huge text-center">
+            <span ng-show="data.upperBound">{{data.upperBound}}°</span>
+          </div>
+          <div class="col col-10 text-right">
+            <a  class="font-more-huge" href="javascript://" ng-click="data.upperBound=data.upperBound+1"><i class="icon ion-plus-circled"></i></a>
+          </div>
+        </div>
+      </li>
     </ul>
   </ion-content>
 </ion-view>
