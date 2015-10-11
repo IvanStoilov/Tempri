@@ -4,3 +4,13 @@
 node_modules/
 platforms/
 plugins/
+
+.idea/.name
+
+.idea/jsLibraryMappings.xml
+
+.idea/libraries/tempri_node_modules.xml
+
+*.xml
+
+*.iml
