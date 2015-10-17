@@ -2,8 +2,9 @@
 
 require dirname(__FILE__) . "/classes/firebase.php";
 require dirname(__FILE__) . "/classes/ovh-temperature.php";
+require dirname(__FILE__) . "/classes/sensor-temperature.php";
 
-$currentTemperature = OvhTemperature::getCurrentTemperature();
+$currentTemperature = SensorTemperature::getCurrentTemperature();
 
 echo "Current temperature is: {$currentTemperature}°C\n";
 
