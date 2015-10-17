@@ -1,11 +1,15 @@
 <?php
 
+require "classes/firebase.php";
+require "classes/ovh-temperature.php";
+require "classes/sensors.php";
+
 class Tempri {
   public function run() {
     $data = Firebase::getData();
 
     $requiredTemp = $this->getRequiredTemperature($data);
-    $currentTemp = Temperature::getCurrentTemperature();
+    $currentTemp = OvhTemperature::getCurrentTemperature();
 
     print_r($currentTemp);
 

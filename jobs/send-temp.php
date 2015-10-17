@@ -1,7 +1,7 @@
 <?php
 
-require "classes/firebase.php";
-require "classes/ovh-temperature.php";
+require dirname(__FILE__) . "/classes/firebase.php";
+require dirname(__FILE__) . "/classes/ovh-temperature.php";
 
 $currentTemperature = OvhTemperature::getCurrentTemperature();
 
