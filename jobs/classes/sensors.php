@@ -4,6 +4,10 @@ class Sensors {
   private static $file = ".status";
 
   public static function turnHeatingOn() {
+    if (self::isOn()) {
+      return ;
+    }
+
     self::setStatus(1);
 
     echo "Heating on\n";
