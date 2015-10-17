@@ -2,6 +2,7 @@
 
 require "classes/firebase.php";
 require "classes/ovh-temperature.php";
+require "classes/sensor-temperature.php";
 require "classes/sensors.php";
 
 class Tempri {
@@ -9,7 +10,7 @@ class Tempri {
     $data = Firebase::getData();
 
     $requiredTemp = $this->getRequiredTemperature($data);
-    $currentTemp = OvhTemperature::getCurrentTemperature();
+    $currentTemp = SensorTemperature::getCurrentTemperature();
 
     if ($currentTemp > $requiredTemp + $data['upperBound']) {
       Sensors::turnHeatingOff();
