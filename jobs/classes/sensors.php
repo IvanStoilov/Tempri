@@ -15,6 +15,10 @@ class Sensors {
   }
 
   public static function turnHeatingOff() {
+    if (!self::isOn()) {
+      return ;
+    }
+
     self::setStatus(0);
 
     echo "Heating off\n";

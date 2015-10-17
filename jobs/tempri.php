@@ -11,8 +11,6 @@ class Tempri {
     $requiredTemp = $this->getRequiredTemperature($data);
     $currentTemp = OvhTemperature::getCurrentTemperature();
 
-    print_r($currentTemp);
-
     if ($currentTemp > $requiredTemp + $data['upperBound']) {
       Sensors::turnHeatingOff();
     } elseif ($currentTemp < $requiredTemp + $data['lowerBound']) {
