@@ -1,6 +1,7 @@
 <?php
 
-require dirname(__FILE__) . "/log.php";
+require_once "./log.php"
+require_once "./config.php";
 
 class Sensors {
   private static $file = ".status";
@@ -13,7 +14,7 @@ class Sensors {
     self::setStatus(1);
 
     Log::write("Heating on");
-    self::setServo(1700);
+    self::setServo(Config::SERVO_ON_FREQ);
   }
 
   public static function turnHeatingOff() {
@@ -24,7 +25,7 @@ class Sensors {
     self::setStatus(0);
 
     Log::write("Heating off");
-    self::setServo(1000);
+    self::setServo(Config::SERVO_OFF_FREQ);
   }
 
   public static function isOn() {

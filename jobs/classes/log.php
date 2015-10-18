@@ -1,14 +1,14 @@
 <?php
 
-require dirname(__FILE__) . "/config.php";
+require_once "./config.php";
 
 class Log {
   public static function write($message) {
     $date = date('[Y-m-d H:i:s] ');
-    $log = $date . $message . "\n";
+    var $log = $date . $message . "\n";
 
     echo $log;
 
-    file_put_contents(Config::LOG_FILE, $log, FILE_APPEND);
+    file_put_contents(Config::$logFile, $log, FILE_APPEND);
   }
 }

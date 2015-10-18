@@ -1,9 +1,9 @@
 <?php
 
-require "classes/firebase.php";
-require "classes/ovh-temperature.php";
-require "classes/sensor-temperature.php";
-require "classes/sensors.php";
+require_once dirname(__FILE__) . "/classes/firebase.php";
+require_once dirname(__FILE__) . "/classes/ovh-temperature.php";
+require_once dirname(__FILE__) . "/classes/sensor-temperature.php";
+require_once dirname(__FILE__) . "/classes/sensors.php";
 
 class Tempri {
   public function run() {
