@@ -1,5 +1,7 @@
 <?php
 
+require "./log.php"
+
 class Sensors {
   private static $file = ".status";
 
@@ -10,7 +12,7 @@ class Sensors {
 
     self::setStatus(1);
 
-    echo "Heating on\n";
+    Log::write("Heating on");
     self::setServo(1700);
   }
 
@@ -21,7 +23,7 @@ class Sensors {
 
     self::setStatus(0);
 
-    echo "Heating off\n";
+    Log::write("Heating off");
     self::setServo(1000);
   }
 
