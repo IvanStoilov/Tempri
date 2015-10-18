@@ -1,6 +1,6 @@
 <?php
 
-require "./log.php"
+require dirname(__FILE__) . "/log.php";
 
 class Sensors {
   private static $file = ".status";
