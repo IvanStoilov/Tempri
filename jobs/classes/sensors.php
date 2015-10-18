@@ -1,7 +1,7 @@
 <?php
 
-require_once "./log.php"
-require_once "./config.php";
+require_once dirname(__FILE__) . "/log.php";
+require_once dirname(__FILE__) . "/config.php";
 
 class Sensors {
   private static $file = ".status";
