@@ -30,7 +30,7 @@ class Tempri {
     $currentTemp = SensorTemperature::getCurrentTemperature();
     $status = Sensors::isOn();
 
-    echo "Required temp: $requiredTemp ({$data['lowerBound']} - $data['upperBound'])\n";
+    echo "Required temp: $requiredTemp ({$data['lowerBound']} - {$data['upperBound']})\n";
     echo "Current temp: $currentTemp \n";
     echo "Status: $status \n";
   }
