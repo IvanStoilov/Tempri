@@ -58,7 +58,7 @@ class Tempri {
 
 $tempri = new Tempri();
 
-if ($argv[1] === '-m') {
+if (count($argv) > 0 && $argv[1] === '-m') {
   $tempri->measure();
 } else {
   $tempri->run();
