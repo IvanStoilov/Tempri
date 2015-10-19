@@ -14,5 +14,5 @@ if (freq >= 100 and freq <= 2000):
 else:
         print "Value not in the 1000-2000 range!"
 
-time.sleep(0.5)
+time.sleep(1)
 servo.stop_servo(17)
