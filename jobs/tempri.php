@@ -23,6 +23,18 @@ class Tempri {
     }
   }
 
+  public function measure() {
+    $data = Firebase::getData();
+
+    $requiredTemp = $this->getRequiredTemperature($data);
+    $currentTemp = SensorTemperature::getCurrentTemperature();
+    $status = Sensors::isOn();
+
+    echo "Required temp: $requiredTemp \n";
+    echo "Current temp: $currentTemp \n";
+    echo "Status: $status \n";
+  }
+
   public function getRequiredTemperature($data) {
     if ($this->hasActiveProgram($data['programs'])) {
       return $data['programTemp'];
@@ -45,4 +57,9 @@ class Tempri {
 }
 
 $tempri = new Tempri();
-$tempri->run();
+
+if ($argv[1] === '-m') {
+  $tempri->measure();
+} else {
+  $tempri->run();
+}
